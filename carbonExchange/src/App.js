@@ -1,25 +1,28 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/common/Navbar';
-import Footer from './components/common/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/common/Navbar'; // If you want a global navbar
+import Footer from './components/common/Footer'; // If you want a global footer
 import InvestorDashboard from './components/Investor/InvestorDashboard';
 import CarbonCompanyList from './components/CarbonCompany/CarbonCompanyList';
 import AdminDashboard from './components/Admin/AdminDashboard';
+import Homepage from './components/Investor/Homepage';// Import the new LandingPage
 
 function App() {
   return (
     <Router>
       <div className="App">
+        {/* Optional: If you don't want the global Navbar on the LandingPage, remove it */}
+        {/* <Navbar /> */}
         <Navbar />
-        <Switch>
-          <Route path="/investor" component={InvestorDashboard} />
-          <Route path="/carbon-companies" component={CarbonCompanyList} />
-          <Route path="/admin" component={AdminDashboard} />
-          <Route path="/" exact>
-            <h1>Welcome to carbonExchange</h1>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/investor" element={<InvestorDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/" element={<Homepage />} />
+        </Routes>
         <Footer />
+        {/* Optional: If you don't want the global Footer on the LandingPage, remove it */}
+        {/* <Footer /> */}
       </div>
     </Router>
   );
