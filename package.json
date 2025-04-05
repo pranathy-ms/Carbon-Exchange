@@ -1,0 +1,22 @@
+{
+  "name": "scarlethack",
+  "version": "1.0.0",
+  "description": "CarbonExchange Investment Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "unitTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajuMeesala11/Carbon-Exchange.git"
+  },
+  "keywords": [
+    "CE"
+  ],
+  "author": "Raju Meesala and Pranathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajuMeesala11/Carbon-Exchange/issues"
+  },
+  "homepage": "https://github.com/RajuMeesala11/Carbon-Exchange#readme"
+}
